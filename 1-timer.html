@@ -3,23 +3,50 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 2</title>
-  <script type="module" crossorigin src="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+  <title>Countdown timer</title>
+  <script type="module" crossorigin src="/vanilla-app-template/1-timer.js"></script>
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-BbbuE1sJ.js">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/vendor-CZjNVMTf.css">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-C1dKkEvf.css">
 </head>
 
 <body>
-
   <main>
     <div class="container">
-      <h1 class="main-title">
-        Timer
-      </h1>
+      <h1 class="main-title">Timer</h1>
       <a class="back-link" href="./index.html">Go back</a>
+
+      <div class="timer-controls">
+        <input type="text" id="datetime-picker" aria-label="Choose the countdown end date and time" />
+        <button type="button" data-start disabled>Start</button>
+      </div>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
     </div>
   </main>
+
 </body>
 
 </html>

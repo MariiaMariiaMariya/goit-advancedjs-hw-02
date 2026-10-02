@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Snackbar</title>
-  <script type="module" crossorigin src="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+  <script type="module" crossorigin src="/vanilla-app-template/2-snackbar.js"></script>
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-BbbuE1sJ.js">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/vendor-CZjNVMTf.css">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-C1dKkEvf.css">
 </head>
 
 <body>
@@ -19,6 +22,28 @@
       </h1>
       <a class="back-link" href="./index.html">Go back</a>
     </div>
+    <form class="form">
+      <label>
+        Delay (ms)
+        <input type="number" name="delay" min="0" step="1" required />
+      </label>
+
+      <fieldset>
+        <legend>State</legend>
+
+        <label>
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
+        </label>
+
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </fieldset>
+
+      <button type="submit">Create notification</button>
+    </form>
   </main>
 
 </body>
